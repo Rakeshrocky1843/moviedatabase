@@ -1,0 +1,37 @@
+import java.sql.*;
+ 
+public class GFG {
+    public static void main(String[] args)
+    {
+        Connection con = null;
+        PreparedStatement p = null;
+        ResultSet rs = null;
+ 
+        con = connection.connectDB();
+        try {
+            String sql = "select * from cuslogin";
+            p = con.prepareStatement(sql);
+            rs = p.executeQuery();
+ 
+            // Printing ID, name, email of customers
+            // of the SQL command above
+            System.out.println("movies\t\lead_actor\t\lead_actress\t\year_of_release\t\director_name");
+ 
+            // Condiion check
+            while (rs.next()) {
+ 
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String email = rs.getString("email");
+                System.out.println( movies+ "\t\t" + lead_actor
+                                   + "\t\t" + lead_actress + "\t\t" + year_of_release +"\t\t" + director_name);
+            }
+        }
+ 
+        // Catch block to handle exception
+        catch (SQLException e) {
+ 
+            // Print exception pop-up on scrreen
+            System.out.println(e);
+        }
+    }

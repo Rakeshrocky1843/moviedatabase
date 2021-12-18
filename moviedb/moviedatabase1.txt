@@ -1,0 +1,19 @@
+CREATE TABLE moviedatabase (
+	movies char PRIMARY KEY,
+   	lead_actor varchar,
+	lead_actress varchar,
+        year_of_release int,
+        director name varchar,
+	table_constraints
+);
+
+
+INSERT INTO moviedatabase (movies,lead_actor,lead_actress,year_of_release,director name)
+VALUES ( 'abc', 'ram','kavita', 2016,'ravi');
+
+INSERT INTO moviedatabase (movies,lead_actor,lead_actress,year_of_release,director name)
+VALUES ('bcd', 'lakshman','rani', 2018,'balu');
+
+INSERT INTO moviedatabase (movies,lead_actor,lead_actress,year_of_release,director name)
+VALUES ('efg', 'hanuman','rajeshwari', 2020,'kotiki');
+
